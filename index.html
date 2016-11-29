@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="cssMonoApp" ng-controller="ctrlSizing">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document Title</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://use.typekit.net/eqe8zsv.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="controls">
+      <div class="fontFamily control">
+        <span class="key">FONT FAMILY</span>
+        <span class="dotLine"></span>
+        <span class="value">CSS Mono</span>
+      </div>
+      <div class="fontSize control">
+        <span class="key">FONT SIZE</span>
+        <input type="range" value="7" min="0" max="30" step="1" ng-model="fontSize">  
+        <span class="value">{{fontSizeArray[fontSize]}}PX/{{fontSizeArray[fontSize]*1.4 | number:0}}PX</span>
+      </div>
+    </div>
+    <div class="text"
+         style="font-size: {{fontSizeArray[fontSize]}}px;">
+  <pre class="line-numbers code-block-left"><code class= class="language-scss" contenteditable autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">$size: 8;
+
+body {
+  background: #000;
+  color: #bfffa5;
+  font-family: 'CSS Mono';
+  margin: 0;
+}
+
+.container {
+  height: auto;
+  left: 50%;
+  min-width: 400px;
+  opacity: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: auto;
+  z-index: 1;
+
+  .char {
+    line-height: 0.1;
+    max-height: $size + px;
+    max-height: $size + px;
+    max-width: $size + px;
+    min-width: $size + px;
+    text-align: center;
+  }
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-size: $size + px;
+  left: 50%;
+  padding: $size / 8 + px $size / 2 + px;
+  position: fixed;
+  text-align: center;
+  top: 50%;</code></pre>
+  <pre class="line-numbers code-block-right"><code class= class="language-scss" contenteditable  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">  transform: translate(-50%, -50%);
+  transition: all 0s ease;
+  z-index: 99;
+
+  &:hover {
+    cursor: pointer;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+main { 
+  font-size: 2rem; 
+  margin: 0 auto;
+  max-width: 800px;
+  width : 60%;
+}
+
+h1 { 
+  font-size: 1.7em;
+  line-height: 1.8em;
+  margin-top: 3em;
+  text-align: center;
+}
+
+p {
+  -webkit-margin-after: 1em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-end: 0px;
+  -webkit-margin-start: 0px;
+}
+
+@media all and (max-width: 1000px) {
+  h1 { 
+    font-size: 10vw; 
+  }
+
+  main { 
+    font-size: 1.6rem;  
+  }
+}</code></pre>
+    </div>
+    <div class="newsletter">
+      <h1>“CSS Mono” Newsletter</h1>
+      <h4>SIGN UP! BE THE FIRST ONE TO DOWNLOAD <span>CSS Mono</span> WHEN IT IS READY.</h4>
+      <form class="email" action="//profession.us10.list-manage.com/subscribe/post?u=633707dcf64ed1f1b58af824c&amp;id=e4ea9b45d3" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+        <input ng-model="email" type="email" value="" name="EMAIL" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button class="icon icon-mail next" name="subscribe" type="submit"> 
+        </button>  
+      </form>
+
+    </div>
+    <div class="copyright">
+      <h4>COPYRIGHT 2016</h4>
+      <a href="https://twitter.com/DesignJokes" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="56.191" height="45.733" viewBox="0 0 56.191 45.733"><title>logo W, wentin</title><g id="logo-W"><path id="signal4" d="M46.4,13.349a3.547,3.547,0,0,1-4.778-1.672,3.657,3.657,0,0,1,1.645-4.855,3.548,3.548,0,0,1,4.778,1.672A3.658,3.658,0,0,1,46.4,13.349h0Z" transform="translate(0 -0.231)" fill="none" stroke="#7cffbb" stroke-width="2"/><polygon id="signal3" points="39.119 43.422 23.772 11.446 33.557 11.445 44.013 33.229 39.119 43.422" fill="none" stroke="#7cffbb" stroke-width="2"/><path id="lin3" d="M41.621,11.678a7.315,7.315,0,0,1,3.29-9.71,7.1,7.1,0,0,1,9.555,3.343,7.354,7.354,0,0,1,0,6.366L44.012,33.46" transform="translate(0 -0.231)" fill="none" stroke="#7cffbb" stroke-width="2"/><path id="line2" d="M25.026,33.458l4.6-9.584" transform="translate(0 -0.231)" fill="none" stroke="#7cffbb" stroke-width="2"/><path id="line1" d="M1.725,18.041a7.315,7.315,0,0,1,3.29-9.71,7.1,7.1,0,0,1,9.555,3.343,7.315,7.315,0,0,1-3.29,9.71,7.075,7.075,0,0,1-1.566.56" transform="translate(0 -0.231)" fill="none" stroke="#7cffbb" stroke-width="2"/><path id="signal2" d="M14.571,11.659a7.315,7.315,0,0,1-3.29,9.71,7.077,7.077,0,0,1-1.567.558l10.42,21.709,4.893-10.193L14.571,11.659h0Z" transform="translate(0 -0.231)" fill="#7cffbb" stroke="#7cffbb" stroke-width="2"/><path id="signal1" d="M6.5,19.713a3.548,3.548,0,0,1-4.778-1.672A3.658,3.658,0,0,1,3.37,13.186a3.548,3.548,0,0,1,4.778,1.672A3.658,3.658,0,0,1,6.5,19.713h0Z" transform="translate(0 -0.231)" fill="#7cffbb" stroke="#7cffbb" stroke-width="2"/></g></svg></a>
+    </div>
+  </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/113726/prism.js'></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
